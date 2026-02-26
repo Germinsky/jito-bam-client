@@ -82,6 +82,15 @@ pub enum JitoBamError {
 
     #[error("Price feed unavailable: {0}")]
     PriceFeedUnavailable(String),
+
+    #[error("Meteora DLMM error: {0}")]
+    MeteoraDlmmError(String),
+
+    #[error("Slippage exceeded: expected min {min_out} but got {actual_out}")]
+    SlippageExceeded { min_out: u64, actual_out: u64 },
+
+    #[error("Dynamic tip error: {0}")]
+    DynamicTipError(String),
 }
 
 pub type Result<T> = std::result::Result<T, JitoBamError>;
