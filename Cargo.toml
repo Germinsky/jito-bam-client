@@ -24,3 +24,5 @@ sha2 = "0.10"
 ed25519-dalek = { version = "2", features = ["digest"] }
 chrono = { version = "0.4", features = ["serde"] }
 hex = "0.4"
+jito-sdk-rust = "0.3.2"
+base64 = "0.21"
