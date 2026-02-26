@@ -1,6 +1,7 @@
 pub mod ace;
 pub mod attestation;
 pub mod bam;
+pub mod bam_rpc;
 pub mod bundle;
 pub mod dynamic_tip;
 pub mod engine;
@@ -9,4 +10,5 @@ pub mod meteora_dlmm;
 pub mod raydium_clmm;
 pub mod sdk;
 pub mod tip;
+pub mod tip_market;
 pub mod tx_builder;

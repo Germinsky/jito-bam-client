@@ -94,6 +94,12 @@ pub enum JitoBamError {
 
     #[error("Raydium CLMM error: {0}")]
     RaydiumClmmError(String),
+
+    #[error("BAM RPC error: {0}")]
+    BamRpcError(String),
+
+    #[error("Tip market error: {0}")]
+    TipMarketError(String),
 }
 
 pub type Result<T> = std::result::Result<T, JitoBamError>;
