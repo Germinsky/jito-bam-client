@@ -37,6 +37,24 @@ pub enum JitoBamError {
 
     #[error("Serialization error: {0}")]
     Serialization(String),
+
+    #[error("Bundle rejected: {0}")]
+    BundleRejected(String),
+
+    #[error("Bundle too large: {count} transactions (maximum: {max})")]
+    BundleTooLarge { count: usize, max: usize },
+
+    #[error("Bundle not landed after {attempts} status polls")]
+    BundleNotLanded { attempts: u32 },
+
+    #[error("RPC error: {0}")]
+    RpcError(String),
+
+    #[error("Max retries ({0}) exhausted")]
+    RetriesExhausted(u32),
+
+    #[error("Timeout after {0} ms")]
+    Timeout(u64),
 }
 
 pub type Result<T> = std::result::Result<T, JitoBamError>;
