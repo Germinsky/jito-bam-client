@@ -1,3 +1,4 @@
+pub mod ace;
 pub mod attestation;
 pub mod bam;
 pub mod bundle;

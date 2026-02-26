@@ -73,6 +73,15 @@ pub enum JitoBamError {
 
     #[error("Position mismatch: expected index {expected}, proved index {actual}")]
     PositionMismatch { expected: u32, actual: u32 },
+
+    #[error("ACE plugin error: {0}")]
+    AcePluginError(String),
+
+    #[error("ACE trigger registration rejected: {0}")]
+    AceTriggerRejected(String),
+
+    #[error("Price feed unavailable: {0}")]
+    PriceFeedUnavailable(String),
 }
 
 pub type Result<T> = std::result::Result<T, JitoBamError>;
