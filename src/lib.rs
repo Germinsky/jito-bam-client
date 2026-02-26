@@ -6,6 +6,7 @@ pub mod dynamic_tip;
 pub mod engine;
 pub mod error;
 pub mod meteora_dlmm;
+pub mod raydium_clmm;
 pub mod sdk;
 pub mod tip;
 pub mod tx_builder;

@@ -91,6 +91,9 @@ pub enum JitoBamError {
 
     #[error("Dynamic tip error: {0}")]
     DynamicTipError(String),
+
+    #[error("Raydium CLMM error: {0}")]
+    RaydiumClmmError(String),
 }
 
 pub type Result<T> = std::result::Result<T, JitoBamError>;
