@@ -1,0 +1,18 @@
+[package]
+name = "jito-bam-client"
+version = "0.1.0"
+edition = "2021"
+description = "Solana transaction builder with Jito BAM TEE submission and tip inclusion"
+
+[dependencies]
+solana-sdk = "2.1"
+solana-client = "2.1"
+solana-transaction-status = "2.1"
+tonic = { version = "0.12", features = ["tls", "tls-webpki-roots"] }
+prost = "0.13"
+tokio = { version = "1", features = ["full"] }
+rand = "0.8"
+thiserror = "2"
+tracing = "0.1"
+bincode = "1.3"
+bs58 = "0.5"
