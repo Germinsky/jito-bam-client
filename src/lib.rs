@@ -1,3 +1,4 @@
+pub mod attestation;
 pub mod bam;
 pub mod bundle;
 pub mod error;

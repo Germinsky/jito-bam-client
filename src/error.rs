@@ -55,6 +55,24 @@ pub enum JitoBamError {
 
     #[error("Timeout after {0} ms")]
     Timeout(u64),
+
+    #[error("Attestation signature invalid: {0}")]
+    AttestationSignatureInvalid(String),
+
+    #[error("Attestation slot mismatch: expected {expected}, got {actual}")]
+    AttestationSlotMismatch { expected: u64, actual: u64 },
+
+    #[error("Transaction not included in attested Merkle root")]
+    TransactionNotInMerkleRoot,
+
+    #[error("Attestation expired: age {age_secs}s exceeds max {max_secs}s")]
+    AttestationExpired { age_secs: u64, max_secs: u64 },
+
+    #[error("Merkle proof length invalid: {0}")]
+    InvalidMerkleProofLength(usize),
+
+    #[error("Position mismatch: expected index {expected}, proved index {actual}")]
+    PositionMismatch { expected: u32, actual: u32 },
 }
 
 pub type Result<T> = std::result::Result<T, JitoBamError>;
